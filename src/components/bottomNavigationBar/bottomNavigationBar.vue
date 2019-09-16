@@ -54,7 +54,6 @@ export default {
         case '/search': this.iconSearch = '#icon-search';break;
         case '/orders': this.iconOrders = '#icon-shopping-fill';break;
       }
-
     }
   }
 };
@@ -62,7 +61,7 @@ export default {
 
 <style lang="stylus" scoped>
 #navigation-bar 
-  font-size: 12px;
+  font-size: 0.2667rem;
   width: 100%;
   position: fixed;
   left: 0;
@@ -75,7 +74,7 @@ export default {
 
   a 
     flex: 2.5;
-    height: 80%;
+    height: 75%;
     text-decoration none
     color #888
 

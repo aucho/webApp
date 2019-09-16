@@ -16,16 +16,13 @@ export default {
 </script>
 
 <style lang="stylus">
-.app
-  width 100%
-  height 100%
-  background #e5e5e5
+@import './assets/stylus/minxins.styl';
 
 </style>
 
 <style type="text/css">
 .icon {
-    width: 2.5em; height: 2.5em;
+    width: 1.75rem; height: 1.75rem;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
