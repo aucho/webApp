@@ -2,7 +2,7 @@
   <div class="adBoard">
     <div class="description">
       <h3>广告描述</h3>
-      <div class="des1">图片是饿了么上的</div>
+      <div class="des1">图片取自饿了么</div>
       <div class="des2">点击抢购 ></div><!-- <router-link class="des2"></router-link> -->
       <img src="https://fuss10.elemecdn.com/e/ee/df43e7e53f6e1346c3fda0609f1d3png.png?imageMogr/format/webp/thumbnail/!282x188r/gravity/Center/crop/282x188/">
     </div>

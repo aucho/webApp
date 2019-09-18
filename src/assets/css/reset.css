@@ -77,6 +77,12 @@ body{
 html{
   overflow-y: scroll;
 }
+button{
+  border: none;
+  background-color: #08f;
+  border-radius: 0.2rem;
+  color: #fefefe
+}
  
 /*清除浮动*/
 .clearfix:before,

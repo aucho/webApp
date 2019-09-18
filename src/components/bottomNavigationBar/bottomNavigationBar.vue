@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#navigation-bar 
+#navigation-bar
   font-size: 0.2667rem;
   width: 100%;
   position: fixed;
@@ -71,10 +71,11 @@ export default {
   box-shadow: 0 0 0.2em #999;
   text-align: center;
   align-items: center;
-
+  z-index:10
+  background-color #fff
   a 
-    flex: 2.5;
-    height: 75%;
+    flex 2.5;
+    height 75%;
     text-decoration none
     color #888
 

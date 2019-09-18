@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-//初始化c样式
+//初始化css样式
 import './assets/css/reset.css'
 import './assets/stylus/minxins.styl'
 //组件库mint-ui

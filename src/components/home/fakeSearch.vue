@@ -16,10 +16,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-$background-color
 .search/*header下 伪造搜索框外围*/
+  z-index:2 
   background-color #08f
-  margin -1px
+  margin-top -1px
   padding 0.6rem 1rem
   position sticky
   top 0
