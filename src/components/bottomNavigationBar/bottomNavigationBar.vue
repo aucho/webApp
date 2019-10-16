@@ -66,7 +66,7 @@ export default {
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 8%;
+  height: 14.2vw;
   display: flex;
   box-shadow: 0 0 0.2em #999;
   text-align: center;
@@ -78,11 +78,13 @@ export default {
     height 75%;
     text-decoration none
     color #888
-
+    .icon
+      width 7vw
+      height 8vw
   .router-link-active
     color #26a2ff
-
   span 
+    font-size 3.0vw
     display block
     width: 100%
 </style>

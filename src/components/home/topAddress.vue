@@ -5,10 +5,7 @@
         <svg class="icon" aria-hidden="true">
           <use href="#icon-left-circle"/>
         </svg>
-        <span class="ellipsis">杭州电子科技大学实验楼</span>
-        <svg class="icon" aria-hidden="true">
-          <use href="#icon-left-circle"/>
-        </svg>
+        <span class="ellipsis">地址栏</span>
       </div>
     </div>
   </div>

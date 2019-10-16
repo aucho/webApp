@@ -21,14 +21,15 @@
       background: -moz-linear-gradient(#eee, #fff); /* Firefox 3.6-15 */
       background: linear-gradient(90deg, #eee 10%, #f5f5f5 90%);
       h3
-        margin 2.6vw 0 
+        margin 2.6vw 0
+        font-size 4.7vw
       .des1
         color #666
-        font-size 0.95rem
+        font-size 3.5vw
       .des2
         margin 2.6vw 0
         color #966 
-        font-size 0.95rem
+        font-size 3.6vw
         font-weight 600
       img
         position absolute

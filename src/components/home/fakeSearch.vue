@@ -17,10 +17,11 @@ export default {
 
 <style lang="stylus" scoped>
 .search/*header下 伪造搜索框外围*/
+  font-size 4vw
   z-index:2 
   background-color #08f
   margin-top -1px
-  padding 0.6rem 1rem
+  padding 2.4vw 4vw
   position sticky
   top 0
   a /*router-link*/

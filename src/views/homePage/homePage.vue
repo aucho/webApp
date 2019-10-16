@@ -13,9 +13,19 @@
     <span>—</span> 标题 <span>—</span>
     </div>
     <!-- 商家 -->
-    <div v-if="authorized">
-      <div class="shoplist" >
-        <shop-list-item :shopinfo = "shopitem"  v-for="shopitem in shops" :key="shopitem.id"></shop-list-item>
+    <div v-if="this.$store.state.authorized">
+      <div v-if="listLoading" class="loading">
+        <mt-spinner type="snake" class="spinner"></mt-spinner>
+    </div>
+
+      <div v-if="error"> 店铺加载失败</div>
+
+      <div v-if="shops"  class="shoplist" >
+        <shop-list-item  
+           v-for="shopitem in shops" 
+           :shopInfo="shopitem"  
+           :key="shopitem.id">
+        </shop-list-item>
       </div>
     </div>
 
@@ -34,29 +44,43 @@ import shopListItem from '../../components/home/shopListItem'
 export default {
   data() {
     return {
-      authorized: true,
-      shops:[
-        {
-          imgUrl:'',
-          id:0,
-          name:'商家名称',
-          score: 5.0,
-          sellvolume:100,
-          price: 0,
-          tag:['描述aaaaaaaaaaaaa','描述b','aaa','bbb','ccccccccccccccccc']
-        },
-        {
-          imgUrl:'',
-          id:1,
-          name:'商家baaaaaaaaaaaaaaaaaaaaaaaa',
-          score: 5.0,
-          sellvolume:10086,
-          price: 0,
-          tag:['很难吃']
-        },
-      ]
-      
+      shops: null,
+      // [
+      //   {
+      //     imgUrl:'',
+      //     id:0,
+      //     name:'商家名称',
+      //     score: 5.0,
+      //     sellvolume:100,
+      //     price: 0,
+      //     tag:'描述a,描述b,描述ccccccccccccccccc'
+      //     notice:'本店公告啦啦啦'
+      //   },
+      // ],
+      error:null,
+      listLoading:null,
+      // loading:null,
+      // list:[],
     }
+  },
+  created(){
+    this.fetchData()
+  },
+  watch: {
+    '$route':'fetchData'
+  },
+  methods:{
+    fetchData(){
+      this.error = this.post = null
+      this.listLoading = true
+      this.axios.get('/api/home').then((res)=>{
+        this.shops = res.data
+        this.listLoading = false
+      }).catch(err=>{
+        // console.log(err)
+        this.error = err.toString()
+      })
+    },
   },
   components: {
     fakeSearch,
@@ -81,4 +105,9 @@ export default {
       color #999
   .shoplist
     margin-bottom 20vw
+  .loading
+    padding 5vh 45%
+    .spinner
+      left 50%
+    // transform translateX(-50%)
 </style>
